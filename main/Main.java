@@ -1,5 +1,8 @@
 package main;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 //public class Main {
 //	public static void main(String[] args) {
 //		Hero h = new Hero();
@@ -89,19 +92,36 @@ package main;
 //}
 
 // list14-13 暗黙的に基本データ型とラッパークラスを相互変換してくれる
+//public class Main {
+//	public static void main(String[] args) {
+//		int i1 = 15; // int型のi1に15が代入される
+//
+//		// int型をInteger型に自動変換
+//		Integer i2 = i1;
+//		System.out.println(i2); // 表示結果: 15
+//
+//		// Integer型をint型に自動変換
+//		int i3 = i2;
+//		System.out.println(i3); // 表示結果: 15
+//	}
+//}
+
+// practice14-01
+import java.util.Date;
+//import java.text.SimpleDateFormat;
+//import java.util.Calendar;
+
 public class Main {
 	public static void main(String[] args) {
-		int i1 = 15; // int型のi1に15が代入される
 
-		// int型をInteger型に自動変換
-		Integer i2 = i1;
-		System.out.println(i2); // 表示結果: 15
-
-		// Integer型をint型に自動変換
-		int i3 = i2;
-		System.out.println(i3); // 表示結果: 15
+		Date now = new Date(); // 1
+		Calendar c = Calendar.getInstance(); // 2
+		c.setTime(now); // 2
+		int day = c.get(Calendar.DAY_OF_MONTH); // 3
+		day += 100; // 4
+		c.set(Calendar.DAY_OF_MONTH, day); // 4
+		Date future = c.getTime(); // 5
+		SimpleDateFormat f = new SimpleDateFormat("西暦yyyy年MM月dd日"); // 6
+		System.out.println(future);
 	}
 }
-
-
-
