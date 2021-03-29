@@ -226,17 +226,19 @@ package main;
 //public class Main {
 //	public static void main(String[] args) {
 //		int i1 = 15;
-//		// int を Integer に変換
+//		// int を Integer に変換 ラッパークラスへの型変換にはvalueOf()メソッドを用いる
 //		Integer i2 = Integer.valueOf(i1);
-//		// Integer を int に変換
+//		// Integer を int に変換 基本データ型への型変換にはintValue()などの ~Value()メソッドを用いる
 //		int i3 = i2.intValue();
 //
 //		System.out.println(i1); // 実行結果: 15
-//		System.out.println(i2); // 実行結果: 15
-//		System.out.println(i3); // 実行結果: 15
+//		System.out.println(i2); // 実行結果: 15 Integer型のi2インスタンス内のフィールドの値15
+//		System.out.println(i3); // 実行結果: 15 int型の15
 //	}
 //}
 
+// list14-13 基本データ型とラッパークラスの自動型変換
+// Java5以降では、暗黙的に相互変換を行うAutoBoxingとAutoUnboxingという仕組みが導入された
 public class Main {
 	public static void main(String[] args) {
 		int i1 = 15;
@@ -249,13 +251,6 @@ public class Main {
 	}
 }
 
-// 雛形
-// list14-
-//public class Main {
-//	public static void main(String[] args) {
-//
-//	}
-//}
 
 /*============================================================================
  ==============================以下は一周目の時のコード===========================
